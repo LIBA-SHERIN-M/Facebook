@@ -1,0 +1,505 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #fff;
+    color: #1c1e21;
+
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+
+/* =========================
+   DEMO BANNER
+   ========================= */
+
+.demo-banner {
+    display: none;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    background-color: #f0f2f5;
+    color: #606770;
+
+    text-align: center;
+    font-size: 11px;
+
+    padding: 4px;
+
+    z-index: 1000;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+   ========================= */
+
+.mobile-container {
+    width: 100%;
+    max-width: 450px;
+
+    height: 100vh;
+    height: 100dvh;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 24px 16px 10px;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   LANGUAGE
+   ========================= */
+
+.top-lang {
+    width: 100%;
+
+    text-align: center;
+
+    color: #606770;
+    font-size: 12px;
+
+    margin-top: 4px;
+
+    /* Space between language and logo */
+    margin-bottom: clamp(35px, 8vh, 65px);
+
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   LOGO
+   ========================= */
+
+.logo-container {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Space between logo and form */
+    margin-bottom: clamp(30px, 6vh, 55px);
+
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   LOGIN FORM
+   ========================= */
+
+.login-form {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   FLOATING INPUT
+   ========================= */
+
+.floating-input {
+    position: relative;
+    width: 100%;
+}
+
+
+/* Input box */
+.floating-input input {
+    width: 100%;
+    height: 60px;
+
+    box-sizing: border-box;
+
+    /*
+       No top/bottom padding.
+       This keeps the typed text
+       vertically centered.
+    */
+    padding: 0 16px;
+
+    font-size: 16px;
+    line-height: normal;
+
+    color: #1c1e21;
+
+    background-color: #fff;
+
+    border: 1px solid #ccd0d5;
+    border-radius: 18px;
+
+    outline: none;
+
+    transition: border-color 0.15s ease;
+}
+
+
+/* Focus */
+.floating-input input:focus {
+    border-color: #0866ff;
+}
+
+
+/* =========================
+   FLOATING LABEL
+   ========================= */
+
+.floating-input label {
+    position: absolute;
+
+    left: 16px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    font-size: 16px;
+    line-height: 1;
+
+    color: #606770;
+
+    background-color: #fff;
+
+    padding: 0 4px;
+
+    pointer-events: none;
+
+    transition:
+        top 0.15s ease,
+        transform 0.15s ease,
+        font-size 0.15s ease;
+}
+
+
+/*
+   Move label onto the border
+   when focused or when text exists.
+*/
+.floating-input input:focus+label,
+.floating-input input:not(:placeholder-shown)+label {
+    top: 0;
+
+    transform: translateY(-50%);
+
+    font-size: 12px;
+    line-height: 1;
+
+    color: #606770;
+}
+
+
+/* =========================
+   PASSWORD EYE
+   ========================= */
+
+/*
+   The browser's own password
+   reveal button is intentionally
+   kept.
+
+   No custom eye button is used.
+*/
+
+
+/* =========================
+   LOGIN BUTTON
+   ========================= */
+
+.login-btn {
+    width: 100%;
+    height: 44px;
+
+    background-color: #0866ff;
+    color: #fff;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    padding: 0 14px;
+
+    border: none;
+    border-radius: 100px;
+
+    cursor: pointer;
+
+    margin-top: 0;
+}
+
+.login-btn:disabled {
+    opacity: 0.7;
+    cursor: default;
+}
+
+
+/* =========================
+   FORGOT LINK
+   ========================= */
+
+.forgot-link {
+    text-align: center;
+
+    color: #1c1e21;
+
+    font-weight: 500;
+    font-size: 14px;
+
+    text-decoration: none;
+
+    margin-top: 7px;
+}
+
+
+/* =========================
+   FLEXIBLE SPACE
+   ========================= */
+
+.spacer {
+    flex: 1;
+
+    /*
+       This pushes the bottom
+       section toward the bottom.
+    */
+    min-height: 30px;
+}
+
+
+/* =========================
+   BOTTOM AREA
+   ========================= */
+
+.bottom-area {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    margin-bottom: 0;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   CREATE ACCOUNT
+   ========================= */
+
+.create-btn {
+    width: 100%;
+    height: 40px;
+
+    background-color: transparent;
+
+    color: #0866ff;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    padding: 0 16px;
+
+    border: 1px solid #0866ff;
+    border-radius: 100px;
+
+    cursor: pointer;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   META BRAND
+   ========================= */
+
+.meta-brand {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 9px;
+}
+
+
+/* Meta SVG */
+.meta-brand svg {
+    max-width: 60px;
+    height: auto;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.footer-links {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 16px;
+
+    font-size: 11px;
+}
+
+.footer-links a {
+    color: #606770;
+    text-decoration: none;
+}
+
+
+/* =========================
+   MESSAGE
+   ========================= */
+
+.message-container {
+    width: 100%;
+
+    margin-top: 12px;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    text-align: center;
+}
+
+.message-container.hidden {
+    display: none;
+}
+
+.message-container.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.message-container.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+
+/* =========================
+   SHORT SCREENS
+   ========================= */
+
+@media (max-height: 700px) {
+
+    .mobile-container {
+        padding-top: 16px;
+    }
+
+    .top-lang {
+        margin-top: 2px;
+        margin-bottom: 30px;
+    }
+
+    .logo-container {
+        margin-bottom: 28px;
+    }
+
+    .floating-input input {
+        height: 54px;
+    }
+
+    .login-btn {
+        height: 42px;
+    }
+
+    .spacer {
+        min-height: 20px;
+    }
+
+    .create-btn {
+        margin-bottom: 12px;
+    }
+
+    .meta-brand {
+        margin-bottom: 6px;
+    }
+}
+
+
+/* =========================
+   VERY SHORT SCREENS
+   ========================= */
+
+@media (max-height: 580px) {
+
+    .mobile-container {
+        padding-top: 10px;
+        padding-bottom: 6px;
+    }
+
+    .top-lang {
+        margin-bottom: 20px;
+    }
+
+    .logo-container {
+        margin-bottom: 20px;
+    }
+
+    .logo-container svg {
+        width: 50px;
+        height: 50px;
+    }
+
+    .floating-input input {
+        height: 50px;
+    }
+
+    .login-btn {
+        height: 40px;
+    }
+
+    .forgot-link {
+        margin-top: 4px;
+    }
+
+    .create-btn {
+        height: 36px;
+        margin-bottom: 8px;
+    }
+
+    .meta-brand {
+        margin-bottom: 4px;
+    }
+
+    .footer-links {
+        font-size: 9px;
+    }
+}

